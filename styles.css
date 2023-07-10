@@ -96,3 +96,26 @@ body {
     margin: 32px;
 }
 
+.random-people p {
+    text-align: center;
+    margin-top: 260px;
+    color: var(--lighting-color);
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    height: 150px;
+    width: 28%;
+    margin-top: 40%;
+} 
+
+.contact i { 
+    position: fixed;
+    color: purple;
+}
+
+i:hover {
+    cursor: pointer;
+    background-color: var(--hover-color);
+}
