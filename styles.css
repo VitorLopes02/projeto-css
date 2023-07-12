@@ -13,50 +13,69 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Inter-Tight', sans-serif;
 }
 
 body {
     background-color: var(--main-color);
     display: flex;
     flex-direction: row;
+    background-image: url(https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=282&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    width: 80%;
 }
 
 .menu {
     background-color: var(--secondary-color);
     display: flex;
+    /* flex: 1; */
     flex-direction: column;    
-    width: 120vh;
-    height: 180vh; 
+    width: 20%;     
+    padding-top: 80px;
     text-align: center;
-    gap: 8px;
-    
+    gap: 8px;   
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 45px, rgba(0, 0, 0, 0.22) 8px 15px 45px; 
 }
 
 .menu img {
     width: 60%;
-    border-radius: 50%;
-    margin-top: 80px;    
+    border-radius: 50%;    
 }
 
 .redes-socias {
-    margin-top: 15px;
-    margin: 10px;
+   display: flex;
+   justify-content: center;
+   padding-top: 20px;
+   gap: 24px;
 }
 
 .menu .dados .icons {
-    margin: 10px;
-    text-decoration: none;   
+    font-size: 24px;      
 }
 
 .icons:hover {
     cursor: pointer;
-    background-color: var(--hover-color);
+    color: var(--hover-color);
 }
 
 .about-me,
 .networking {
     margin: 40px;
     padding: 10px;
+    background-color: rgba(127, 255, 212, 0.137);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.5s ease-in-out;
+}
+
+.about-me:hover,
+.networking:hover {
+    transform: translateY(-8px);
 }
 
 .strong,
@@ -77,7 +96,7 @@ body {
 }
 
 .about-me .details-about-me p {
-    margin-left: 120px;   
+    padding-left: 120px;   
 }
 
 .container {
@@ -86,36 +105,122 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
 }
 
 .random-people {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 25%;
+    min-width: 280px;
     height: 280px;
-    background-color: red;
-    border: 1px solid black;
+    background: transparent;
+    backdrop-filter: blur(28px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
     margin: 32px;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+
 }
 
-.random-people p {
-    text-align: center;
-    margin-top: 260px;
+.random-people p a{
+    text-align: center;    
     color: var(--lighting-color);
     font-size: 20px;
 }
 
-footer {
-    display: flex;
-    height: 150px;
-    width: 28%;
-    margin-top: 40%;
-} 
-
-.contact i { 
-    position: fixed;
-    color: purple;
+.random-people a {
+    text-decoration: none;
 }
 
-i:hover {
+.random-people img {
+    width: 90%;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.random-people:hover {
+    transform: translateY(-18px);
+}
+
+
+.contact-wpp {    
+    padding: 15px;    
+    right: 20px;
+    bottom: 20px;    
+    font-size: 30px;
+    position: fixed;
+    cursor: pointer;
+    border-radius: 3rem;
+    background-color: rgba(190, 43, 203, 0.292);
+    /* border: 2px solid black;     */
+} 
+
+.contact-wpp i {     
+    color: rgba(217, 70, 220, 0.781);
+}
+
+.contact-wpp:hover {
     cursor: pointer;
     background-color: var(--hover-color);
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .menu img {
+        width: 250px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .redes-socias {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        gap: 38px;
+     }
+
+     .dados h1 {
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+     }
+     
+     .menu .dados .icons {
+         font-size: 34px;      
+     }    
+
+    .networking {
+        margin: 20px;
+    }
+
+    .container {
+        gap: 50px;        
+     }
+
+     .about-me,
+     .networking {
+        margin: 20px;
+     }
+
+     .random-people {
+        margin: 0;
+     }
+
+     .about-me .details-about-me p {
+        padding-left: 10%;   
+    }
+    
 }
